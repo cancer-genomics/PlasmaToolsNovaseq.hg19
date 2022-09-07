@@ -21,5 +21,6 @@ setDTthreads(1)
 
 #read in the csv from local directory
 ref20_bins <- read_csv("refbins20.csv")
+ref20_bins<-ref20_bins %>% filter(chr != "chrX")
 #save the directory
 usethis::use_data(ref20_bins)
